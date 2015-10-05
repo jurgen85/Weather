@@ -1,0 +1,93 @@
+html,
+body {
+	background: #ffa713;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+h4 {
+	font-weight: 300;
+}
+
+.row.search {
+	margin: 10px 0;	
+}
+
+ul,
+ul li {
+	list-style: none;	
+	margin: 10px 0;
+	padding: 0;
+}
+
+li {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.inner-li {
+	background: rgba(246,246,246,0);
+	padding: 20px;
+	//text-align: center;
+	min-height: 200px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.inner-li img {
+	padding: 2px;
+	margin-bottom: 10px;
+	max-width: 20%;
+}
+
+strong {
+	font-weight: 400;	
+}
+
+hr {
+	width:100%;
+	size: 1;
+	color:#fff;
+}
+
+.panel {
+	background: #ffa713;
+	box-shadow: 0 0 0;
+}
+
+.nav-pills {
+	margin-top: 0;
+	background: #ff8a00;
+}
+
+.nav-pills li {
+	margin: 0;
+}
+
+.nav-pills li a,
+.nav-pills li.active a,
+.nav-pills li a:hover {
+	border-radius: 0;
+	background: none !important;
+	color: white;
+}
+
+.nav-pills li.active a,
+.nav-pills li a:hover {
+	border-bottom: 3px solid white;
+	font-weight: 400;
+}
+
+.nav-pills > li + li {
+	margin-left: 0;
+}

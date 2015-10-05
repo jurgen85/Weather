@@ -1,0 +1,40 @@
+<section>
+    <ul class="nav nav-pills">
+        <li data-ng-class="{ active:panel.isSelected(1)}">
+            <a href="#" data-ng-click="panel.selectTab(1)">Vandaag</a>
+        </li>
+        <li data-ng-class="{ active:panel.isSelected(2)}">
+            <a href="#" data-ng-click="panel.selectTab(2)">Voorspelling</a>
+        </li>
+    </ul>                
+    <div class="panel" data-ng-show="panel.isSelected(1)">
+        <section class="inner-li">
+	        <div class="col-sm-3">
+               	<img src="img/icons/{{currently.icon}}.svg" class="img-responsive"/>
+			</div>
+            <div class="col-sm-9"> 
+		        <strong>Temperatuur:</strong> {{temperature | number : 1}} &#176;C<br/>
+		        <strong>Gevoelstemperatuur:</strong> {{appTemperature | number : 1}} &#176;C<br/>
+		        <strong>Luchtvochtigheid:</strong> {{humidity}}%<br/>
+		        <strong>Windsnelheid:</strong> {{windSpeed | number : 1}} km/h<br/>
+		        <strong>Voorspelling:</strong> {{currently.summary}}<br/>
+		    </div>
+        </section>
+    </div>
+    <div class="panel" data-ng-show="panel.isSelected(2)">
+        <section ng-repeat="day in daily" class="inner-li">
+           	<h4>{{daysOfTheWeek[(futureDay[$index])]}}</h4>
+            <div class="col-sm-3">
+               	<img src="img/icons/{{day.icon}}.svg" class="img-responsive"/>
+			</div>
+            <div class="col-sm-9"> 
+            	<strong>Temperatuur:</strong> {{dayTemperatureMin[$index] | number : 1}} / {{dayTemperatureMax[$index] | number : 1}}&#176;C<br/>
+                <strong>Gevoelstemperatuur:</strong> {{dayApparentTemperatureMin[$index] | number : 1}} / {{dayApparentTemperatureMax[$index] | number : 1}} &#176;C<br/>
+                <strong>Luchtvochtigheid:</strong> {{dayHumidity[$index]}} %<br/>
+                <strong>Windsnelheid:</strong> {{dayWindSpeed[$index] | number : 1}} km/h<br/>
+                <strong>Voorspelling:</strong> {{day.summary}}<br/>
+            </div>
+            
+        </section>
+    </div>
+</section>
